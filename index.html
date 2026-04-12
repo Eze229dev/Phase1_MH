@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiasporaConnect - Envoyer de l'argent, Conserver votre richesse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Smooth animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.6); }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+        
+        /* Gradient backgrounds */
+        .gradient-hero {
+            background: linear-gradient(135deg, #10b981 0%, #059669 50%, #0891b2 100%);
+        }
+        
+        .gradient-accent {
+            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+        }
+        
+        /* Button hover effects */
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px rgba(16, 185, 129, 0.3);
+        }
+        
+        /* Calculator highlight */
+        .savings-highlight {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border: 2px solid #10b981;
+            border-radius: 12px;
+        }
+        
+        /* Feature cards */
+        .feature-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateX(8px);
+            border-left-color: #10b981;
+            background: rgba(16, 185, 129, 0.05);
+        }
+        
+        /* Step indicator */
+        .step-circle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            font-weight: 700;
+        }
+        
+        /* Stat numbers animation */
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- ==================== HEADER/NAVBAR ==================== -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center">
+                    <i class="fas fa-globe text-white text-lg font-bold"></i>
+                </div>
+                <span class="text-xl font-bold text-gray-900">DiasporaConnect</span>
+            </div>
+            <nav class="hidden md:flex gap-8">
+                <a href="#calculator-section" class="text-gray-700 hover:text-emerald-600 font-medium transition">Calculatrice</a>
+                <a href="#how-it-works" class="text-gray-700 hover:text-emerald-600 font-medium transition">Comment ça marche</a>
+                <a href="#impact" class="text-gray-700 hover:text-emerald-600 font-medium transition">Impact</a>
+            </nav>
+            <button class="md:hidden text-gray-700 hover:text-emerald-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="gradient-hero text-white pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left: Copy -->
+                <div class="fade-in-up">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                        Envoyez de l'argent à la maison.
+                        <span class="text-yellow-300">Conservez votre richesse.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-emerald-50 mb-8 leading-relaxed">
+                        Les transferts d'argent africains perdent <strong>100 millions de dollars chaque année</strong> en frais cachés. DiasporaConnect change cela.
+                    </p>
+                    
+                    <!-- Key Stat Highlight -->
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 mb-8 border border-white border-opacity-20">
+                        <p class="text-sm text-emerald-100 mb-2">Économies moyennes par transaction</p>
+                        <p class="text-3xl font-bold">8-15 €</p>
+                    </div>
+                    
+                    <button onclick="document.getElementById('calculator-section').scrollIntoView({ behavior: 'smooth' })" class="btn-primary bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-2xl">
+                        Calculez vos économies →
+                    </button>
+                </div>
+                
+                <!-- Right: Visual Impact -->
+                <div class="fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="relative">
+                        <div class="pulse-glow rounded-2xl overflow-hidden">
+                            <div class="gradient-accent p-8 text-white">
+                                <div class="mb-6">
+                                    <p class="text-sm text-emerald-100 mb-2">Réalité actuelle</p>
+                                    <div class="text-4xl font-bold mb-2">200 € Envoyés</div>
+                                    <div class="text-2xl text-emerald-200">170 € Reçus</div>
+                                    <div class="text-sm text-red-200 font-semibold mt-2">↓ 15% Perdu en frais</div>
+                                </div>
+                                <div class="border-t border-emerald-300 border-opacity-30 pt-6">
+                                    <p class="text-sm text-emerald-100 mb-2">Avec DiasporaConnect</p>
+                                    <div class="text-4xl font-bold mb-2">200 € Envoyés</div>
+                                    <div class="text-2xl text-emerald-200">198 € Reçus</div>
+                                    <div class="text-sm text-green-200 font-semibold mt-2">↓ 1% Frais (Vous économisez 28 €)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROBLEM SECTION ==================== -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Le Problème est Réel</h2>
+                <p class="text-lg text-gray-600">Les frais de transfert sont parmi les coûts financiers les plus élevés en Afrique</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Problem Card 1 -->
+                <div class="feature-card bg-gray-50 rounded-xl p-8 border border-gray-200">
+                    <div class="text-4xl mb-4"><i class="fas fa-money-bill-wave text-red-600"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">L'argent s'écoule</h3>
+                    <p class="text-gray-700">Les services de transfert traditionnels facturent 7-15% par transaction. Un transfert de 200 € perd 14-30 €.</p>
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <p class="text-sm text-gray-600">Pour une famille envoyant 500 €/mois :</p>
+                        <p class="text-2xl font-bold text-red-600 mt-2">840 €/an perdus</p>
+                    </div>
+                </div>
+
+                <!-- Problem Card 2 -->
+                <div class="feature-card bg-gray-50 rounded-xl p-8 border border-gray-200">
+                    <div class="text-4xl mb-4"><i class="fas fa-hourglass-end text-orange-600"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lent et Pénible</h3>
+                    <p class="text-gray-700">L'argent prend 3-7 jours pour arriver. Les familles ont besoin d'aide urgent MAINTENANT, pas la semaine prochaine.</p>
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <p class="text-sm text-gray-600">Factures médicales d'urgence ?</p>
+                        <p class="text-lg font-bold text-orange-600 mt-2">On ne peut pas attendre 5 jours</p>
+                    </div>
+                </div>
+
+                <!-- Problem Card 3 -->
+                <div class="feature-card bg-gray-50 rounded-xl p-8 border border-gray-200">
+                    <div class="text-4xl mb-4"><i class="fas fa-lock text-red-700"></i></div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Risque et Opacité</h3>
+                    <p class="text-gray-700">Pas de transparence. Les intermédiaires prennent des coupes. L'argent peut se perdre dans le système.</p>
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <p class="text-sm text-gray-600">Détails du transfert :</p>
+                        <p class="text-lg font-bold text-red-700 mt-2">Une boîte noire</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real Impact -->
+            <div class="mt-16 bg-red-50 border-l-4 border-red-600 rounded-lg p-8">
+                <p class="text-xl text-gray-900 font-semibold mb-3"><i class="fas fa-map-pin text-red-600 mr-2"></i>Impact au Bénin :</p>
+                <p class="text-lg text-gray-700">
+                    Le Bénin reçoit environ 350 millions € de transferts annuels. À un taux de frais moyen de 10%, 
+                    <strong class="text-red-700">les familles perdent 35 millions € chaque année</strong> uniquement en frais.
+                </p>
+                <p class="text-gray-600 mt-3 italic">C'est l'école, les soins de santé et la dignité qui s'échappent.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SOLUTION SECTION ==================== -->
+    <section class="py-16 md:py-24 gradient-hero text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">La Solution : Simplicité Blockchain</h2>
+                <p class="text-lg text-emerald-50">Pas de banques. Pas d'intermédiaires. Pas de complexité.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Solution Benefit 1 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
+                    <div class="text-5xl mb-4"><i class="fas fa-heart text-green-400"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Frais Minimes (1%)</h3>
+                    <p class="text-emerald-50">Envoyer 200 € ? Vous paierez environ 2 €. C'est tout. Pas de frais cachés. Pas de surprises.</p>
+                </div>
+
+                <!-- Solution Benefit 2 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
+                    <div class="text-5xl mb-4"><i class="fas fa-bolt text-yellow-300"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Livraison Instantanée</h3>
+                    <p class="text-emerald-50">L'argent arrive en minutes, pas en jours. Votre famille l'obtient MAINTENANT quand elle en a besoin.</p>
+                </div>
+
+                <!-- Solution Benefit 3 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
+                    <div class="text-5xl mb-4"><i class="fas fa-shield-alt text-blue-300"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Entièrement Sécurisé</h3>
+                    <p class="text-emerald-50">Sécurité de niveau bancaire utilisant la blockchain. Votre argent et votre identité sont protégés.</p>
+                </div>
+            </div>
+
+            <!-- How It Works Briefly -->
+            <div class="mt-12 bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border border-white border-opacity-20">
+                <h3 class="text-xl font-bold mb-4">Comment ça marche (Langage simple)</h3>
+                <p class="text-emerald-50 text-lg leading-relaxed">
+                    Vous entrez le montant et le numéro de téléphone du destinataire. Notre système utilise la technologie blockchain pour 
+                    <strong>contourner complètement les intermédiaires et les banques</strong>. L'argent se transfère directement et de manière sécurisée. 
+                    Votre destinataire l'obtient sur son numéro de téléphone instantanément — sans configuration de compte requise.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CALCULATOR SECTION (KEY DIFFERENTIATOR) ==================== -->
+    <section id="calculator-section" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Voyez Vos Économies</h2>
+                <p class="text-lg text-gray-600">Découvrez exactement combien vous économiserez</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 md:p-12 border border-emerald-200">
+                
+                <!-- Input Section -->
+                <div class="mb-8">
+                    <label class="block text-sm font-semibold text-gray-700 mb-3">Montant à envoyer (EUR)</label>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl font-bold text-gray-900">€</span>
+                        <input 
+                            type="number" 
+                            id="amountInput" 
+                            value="200" 
+                            min="1" 
+                            max="10000"
+                            class="flex-1 py-4 px-6 text-2xl font-bold border-2 border-emerald-300 rounded-lg focus:outline-none focus:border-emerald-600"
+                        >
+                    </div>
+                    <input 
+                        type="range" 
+                        id="amountSlider" 
+                        value="200" 
+                        min="1" 
+                        max="2000"
+                        class="w-full mt-4 cursor-pointer"
+                    >
+                </div>
+
+                <!-- Results Grid -->
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                    
+                    <!-- Traditional Services -->
+                    <div class="bg-white rounded-lg p-6 border border-gray-300">
+                        <p class="text-sm font-semibold text-gray-600 mb-3">Services Traditionnelles (10% moy)</p>
+                        <div class="mb-4">
+                            <p class="text-gray-700 text-sm mb-1">Frais</p>
+                            <p class="text-3xl font-bold text-red-600" id="traditionalFee">20 €</p>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4">
+                            <p class="text-gray-700 text-sm mb-1">Destinataire reçoit</p>
+                            <p class="text-2xl font-bold text-gray-900" id="traditionalReceive">180 €</p>
+                        </div>
+                    </div>
+
+                    <!-- DiasporaConnect -->
+                    <div class="bg-gradient-accent rounded-lg p-6 text-white relative overflow-hidden">
+                        <div class="absolute top-3 right-3 bg-white text-emerald-600 px-3 py-1 rounded-full text-xs font-bold">RECOMMANDÉ</div>
+                        <p class="text-sm font-semibold text-emerald-100 mb-3">DiasporaConnect (Frais 1%)</p>
+                        <div class="mb-4">
+                            <p class="text-emerald-100 text-sm mb-1">Frais</p>
+                            <p class="text-3xl font-bold text-yellow-300" id="dconnectFee">2 €</p>
+                        </div>
+                        <div class="border-t border-emerald-300 border-opacity-30 pt-4">
+                            <p class="text-emerald-100 text-sm mb-1">Destinataire reçoit</p>
+                            <p class="text-2xl font-bold text-white" id="dconnectReceive">198 €</p>
+                        </div>
+                    </div>
+
+                    <!-- You Save -->
+                    <div class="savings-highlight p-6 flex flex-col justify-center">
+                        <p class="text-sm font-semibold text-emerald-900 mb-3"><i class="fas fa-piggy-bank text-emerald-600 mr-2"></i>VOUS ÉCONOMISEZ</p>
+                        <p class="text-4xl font-bold text-emerald-600" id="youSave">18 €</p>
+                        <p class="text-sm text-emerald-700 mt-2">par transaction</p>
+                    </div>
+                </div>
+
+                <!-- Extended Savings -->
+                <div class="mt-8 grid md:grid-cols-2 gap-6 border-t-2 border-emerald-200 pt-8">
+                    <div>
+                        <p class="text-sm text-gray-600 font-semibold mb-2">Économies Mensuelles (4 transferts)</p>
+                        <p class="text-3xl font-bold text-emerald-600" id="monthlySave">72 €</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600 font-semibold mb-2">Économies Annuelles</p>
+                        <p class="text-3xl font-bold text-emerald-600" id="yearlySave">864 €</p>
+                    </div>
+                </div>
+
+                <p class="text-center text-gray-600 text-sm mt-8">
+                    <i class="fas fa-lightbulb text-yellow-500 mr-1"></i>Imaginez si chaque famille du Bénin utilisait DiasporaConnect. C'est <strong>315 millions € économisés annuellement</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HOW IT WORKS SECTION ==================== -->
+    <section id="how-it-works" class="py-16 md:py-24 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Trois Étapes Simples</h2>
+                <p class="text-lg text-gray-400">Cela prend moins d'1 minute</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="flex justify-center mb-6">
+                        <div class="step-circle">1</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Montant à envoyer</h3>
+                    <p class="text-gray-300 text-lg">
+                        Dites-nous combien vous voulez envoyer. Choisissez EUR, USD ou XOF.
+                    </p>
+                    <div class="mt-8 text-4xl"><i class="fas fa-smartphone text-emerald-400"></i></div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="hidden md:flex items-center justify-center">
+                    <div class="text-gray-600 text-4xl">→</div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="flex justify-center mb-6">
+                        <div class="step-circle">2</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Ajouter Destinataire</h3>
+                    <p class="text-gray-300 text-lg">
+                        Entrez le numéro de téléphone de votre membre de la famille. Nous gérons le reste.
+                    </p>
+                    <div class="mt-8 text-4xl"><i class="fas fa-phone text-emerald-400"></i></div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="hidden md:flex items-center justify-center">
+                    <div class="text-gray-600 text-4xl">→</div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center md:col-start-3">
+                    <div class="flex justify-center mb-6">
+                        <div class="step-circle">3</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">L'argent arrive</h3>
+                    <p class="text-gray-300 text-lg">
+                        Instantané. Sécurisé. Ils reçoivent l'argent directement sur leur numéro.
+                    </p>
+                    <div class="mt-8 text-4xl"><i class="fas fa-check-circle text-green-400"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SOCIAL IMPACT SECTION ==================== -->
+    <section id="impact" class="py-16 md:py-24 bg-gradient-to-r from-emerald-50 to-cyan-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Impact Réel. Changement Réel.</h2>
+                <p class="text-lg text-gray-600">Ce n'est pas juste une question de transfert d'argent. C'est une question de dignité, d'opportunité et d'espoir.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 mb-12">
+                
+                <!-- Impact Stat 1 -->
+                <div class="bg-white rounded-xl p-8 text-center border border-emerald-200 shadow-sm">
+                    <p class="stat-number">35M €</p>
+                    <p class="text-gray-600 font-semibold mt-2">Économisé au Bénin par an</p>
+                    <p class="text-sm text-gray-500 mt-2">Si toute la diaspora nous utilisait</p>
+                </div>
+
+                <!-- Impact Stat 2 -->
+                <div class="bg-white rounded-xl p-8 text-center border border-emerald-200 shadow-sm">
+                    <p class="stat-number">14x</p>
+                    <p class="text-gray-600 font-semibold mt-2">Frais plus bas</p>
+                    <p class="text-sm text-gray-500 mt-2">vs. services traditionnels</p>
+                </div>
+
+                <!-- Impact Stat 3 -->
+                <div class="bg-white rounded-xl p-8 text-center border border-emerald-200 shadow-sm">
+                    <p class="stat-number">100%</p>
+                    <p class="text-gray-600 font-semibold mt-2">Transparent</p>
+                    <p class="text-sm text-gray-500 mt-2">Pas de frais cachés, jamais</p>
+                </div>
+
+                <!-- Impact Stat 4 -->
+                <div class="bg-white rounded-xl p-8 text-center border border-emerald-200 shadow-sm">
+                    <p class="stat-number">&lt;1 min</p>
+                    <p class="text-gray-600 font-semibold mt-2">Temps de Transaction</p>
+                    <p class="text-sm text-gray-500 mt-2">Du début à la fin</p>
+                </div>
+            </div>
+
+            <!-- Emotional Impact Statement -->
+            <div class="bg-white rounded-2xl p-8 md:p-12 border-l-4 border-emerald-600 shadow-lg">
+                <p class="text-2xl md:text-3xl font-bold text-gray-900 leading-relaxed">
+                    « Quand les familles de la diaspora envoient de l'argent à la maison, elles ne déplacent pas juste des chiffres. Elles paient les uniformes scolaires, 
+                    les médicaments, la nourriture sur la table et les rêves de demain. 
+                    <span class="text-emerald-600">DiasporaConnect s'assure que plus de cet amour atteint sa destination.</span> »
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION SECTION ==================== -->
+    <section class="py-16 md:py-24 gradient-hero text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Prêt à envoyer plus intelligemment ?</h2>
+            <p class="text-lg md:text-xl text-emerald-50 mb-12">
+                Rejoignez les familles à travers l'Afrique de l'Ouest qui économisent déjà des milliers.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <button class="btn-primary bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg">
+                    Commencer maintenant →
+                </button>
+                <button class="btn-primary border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-emerald-600 transition-all">
+                    En savoir plus
+                </button>
+            </div>
+
+            <p class="text-sm text-emerald-100"><i class="fas fa-lock mr-2"></i>Sécurisé. Instantané. Équitable. Approuvé par 50 000+ familles.</p>
+
+            <!-- Footer Stats -->
+            <div class="mt-16 pt-8 border-t border-white border-opacity-30">
+                <div class="grid grid-cols-3 gap-6">
+                    <div>
+                        <p class="text-3xl font-bold">2.1 Mds €</p>
+                        <p class="text-sm text-emerald-100 mt-2">Transférés Annuellement</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold">50+</p>
+                        <p class="text-sm text-emerald-100 mt-2">Pays Soutenus</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold">1M+</p>
+                        <p class="text-sm text-emerald-100 mt-2">Utilisateurs Heureux</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 text-gray-300 py-12 md:py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 md:gap-0 mb-8 md:mb-0 md:flex md:justify-between md:items-center pb-8 md:pb-0 border-b md:border-b-0 border-gray-700">
+                <div class="text-center md:text-left">
+                    <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+                        <div class="w-8 h-8 bg-emerald-600 rounded flex items-center justify-center">
+                            <i class="fas fa-globe text-white text-sm"></i>
+                        </div>
+                        <p class="font-bold text-white text-lg">DiasporaConnect</p>
+                    </div>
+                    <p class="text-sm text-gray-400">Rendre les transferts équitables</p>
+                </div>
+                <div class="hidden md:block text-center">
+                    <p class="text-sm">&copy; 2026 DiasporaConnect. Tous droits réservés.</p>
+                </div>
+                <div class="flex justify-center md:justify-end gap-4">
+                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:hidden text-center pt-4 text-xs text-gray-500">
+                <p>&copy; 2026 DiasporaConnect. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== CALCULATOR JAVASCRIPT ==================== -->
+    <script>
+        // Get elements
+        const amountInput = document.getElementById('amountInput');
+        const amountSlider = document.getElementById('amountSlider');
+        
+        // Update outputs
+        const traditionalFee = document.getElementById('traditionalFee');
+        const traditionalReceive = document.getElementById('traditionalReceive');
+        const dconnectFee = document.getElementById('dconnectFee');
+        const dconnectReceive = document.getElementById('dconnectReceive');
+        const youSave = document.getElementById('youSave');
+        const monthlySave = document.getElementById('monthlySave');
+        const yearlySave = document.getElementById('yearlySave');
+
+        // Sync input and slider
+        amountInput.addEventListener('input', (e) => {
+            amountSlider.value = e.target.value;
+            updateCalculator();
+        });
+
+        amountSlider.addEventListener('input', (e) => {
+            amountInput.value = e.target.value;
+            updateCalculator();
+        });
+
+        // Calculate and display results
+        function updateCalculator() {
+            const amount = parseFloat(amountInput.value) || 0;
+            
+            // Traditional services (10% fee)
+            const tradFee = amount * 0.10;
+            const tradReceive = amount - tradFee;
+            
+            // DiasporaConnect (1% fee)
+            const dcFee = amount * 0.01;
+            const dcReceive = amount - dcFee;
+            
+            // Savings
+            const savings = tradFee - dcFee;
+            const monthlySavings = savings * 4;
+            const yearlySavings = savings * 12;
+            
+            // Update DOM with EUR format
+            traditionalFee.textContent = tradFee.toFixed(2) + ' €';
+            traditionalReceive.textContent = tradReceive.toFixed(2) + ' €';
+            dconnectFee.textContent = dcFee.toFixed(2) + ' €';
+            dconnectReceive.textContent = dcReceive.toFixed(2) + ' €';
+            youSave.textContent = savings.toFixed(2) + ' €';
+            monthlySave.textContent = monthlySavings.toFixed(2) + ' €';
+            yearlySave.textContent = yearlySavings.toFixed(2) + ' €';
+        }
+
+        // Initialize calculator
+        updateCalculator();
+
+        // Smooth scroll for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                // In a real scenario, this could navigate or show a modal
+                console.log('Action triggered');
+            });
+        });
+
+        // ==================== SCROLL REVEAL ANIMATIONS ====================
+        ScrollReveal().reveal('.fade-in-up', {
+            duration: 800,
+            distance: '50px',
+            easing: 'ease-in-out',
+            origin: 'bottom',
+            interval: 200
+        });
+
+        // Feature cards animation
+        ScrollReveal().reveal('.feature-card', {
+            duration: 600,
+            distance: '30px',
+            easing: 'ease-out',
+            origin: 'bottom',
+            interval: 100
+        });
+
+        // Solution benefit cards
+        ScrollReveal().reveal('.bg-white.bg-opacity-10.backdrop-blur-sm.rounded-xl', {
+            duration: 700,
+            distance: '40px',
+            easing: 'ease-out',
+            origin: 'bottom',
+            interval: 150
+        });
+
+        // Impact stats animation
+        ScrollReveal().reveal('.bg-white.rounded-xl.p-8.text-center', {
+            duration: 600,
+            distance: '30px',
+            easing: 'ease-out',
+            origin: 'bottom',
+            interval: 100
+        });
+
+        // Step circles animation
+        ScrollReveal().reveal('.step-circle', {
+            duration: 600,
+            distance: '40px',
+            easing: 'ease-out',
+            origin: 'bottom',
+            interval: 150,
+            scale: 0.8
+        });
+
+        // Calculator section
+        ScrollReveal().reveal('.savings-highlight', {
+            duration: 800,
+            distance: '50px',
+            easing: 'ease-in-out',
+            origin: 'bottom'
+        });
+
+        // Buttons animation
+        ScrollReveal().reveal('button', {
+            duration: 600,
+            distance: '20px',
+            easing: 'ease-out',
+            origin: 'bottom'
+        });
+
+        // Headings animation
+        ScrollReveal().reveal('h2, h3', {
+            duration: 600,
+            distance: '30px',
+            easing: 'ease-out',
+            origin: 'top',
+            delay: 100
+        });
+    </script>
+
+</body>
+</html>
