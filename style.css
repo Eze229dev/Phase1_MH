@@ -35,7 +35,8 @@
 }
 
 .gradient-accent {
-    background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+    background: linear-gradient(135deg, #0d5a42 0%, #054f6a 100%);
+    box-shadow: 0 8px 24px rgba(5, 150, 105, 0.25);
 }
 
 /* Button hover effects */
