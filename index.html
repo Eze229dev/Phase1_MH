@@ -6,101 +6,8 @@
     <title>DiasporaConnect - Envoyer de l'argent, Conserver votre richesse</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        /* Smooth animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
-            50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.6); }
-        }
-        
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out;
-        }
-        
-        .pulse-glow {
-            animation: pulse-glow 2s infinite;
-        }
-        
-        /* Gradient backgrounds */
-        .gradient-hero {
-            background: linear-gradient(135deg, #10b981 0%, #059669 50%, #0891b2 100%);
-        }
-        
-        .gradient-accent {
-            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
-        }
-        
-        /* Button hover effects */
-        .btn-primary {
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 25px rgba(16, 185, 129, 0.3);
-        }
-        
-        /* Calculator highlight */
-        .savings-highlight {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
-            border: 2px solid #10b981;
-            border-radius: 12px;
-        }
-        
-        /* Feature cards */
-        .feature-card {
-            transition: all 0.3s ease;
-            border-left: 4px solid transparent;
-        }
-        
-        .feature-card:hover {
-            transform: translateX(8px);
-            border-left-color: #10b981;
-            background: rgba(16, 185, 129, 0.05);
-        }
-        
-        /* Step indicator */
-        .step-circle {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: white;
-            font-weight: 700;
-        }
-        
-        /* Stat numbers animation */
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-    </style>
 </head>
 <body class="bg-gray-50">
     
@@ -118,10 +25,19 @@
                 <a href="#how-it-works" class="text-gray-700 hover:text-emerald-600 font-medium transition">Comment ça marche</a>
                 <a href="#impact" class="text-gray-700 hover:text-emerald-600 font-medium transition">Impact</a>
             </nav>
-            <button class="md:hidden text-gray-700 hover:text-emerald-600">
+            <button id="mobileMenuBtn" class="md:hidden text-gray-700 hover:text-emerald-600">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
+        
+        <!-- Mobile Menu -->
+        <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <a href="#calculator-section" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium transition">Calculatrice</a>
+                <a href="#how-it-works" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium transition">Comment ça marche</a>
+                <a href="#impact" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium transition">Impact</a>
+            </div>
+        </nav>
     </header>
     <!-- ==================== HERO SECTION ==================== -->
     <section class="gradient-hero text-white pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
@@ -484,10 +400,10 @@
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <button class="btn-primary bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg">
-                  <a href="#calculator-section"></a>   Commencer maintenant <i class="fas fa-arrow-right ml-2"></i>
+                  <a href="#calculator-section">Commencer maintenant <i class="fas fa-arrow-right ml-2"></i></a>
                 </button>
                 <button class="btn-primary border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-emerald-600 transition-all">
-                    <a href="#about-section">En savoir plus <i class="fas fa-info-circle ml-2"></i></a> 
+                    <a href="#how-it-works">En savoir plus <i class="fas fa-info-circle ml-2"></i></a> 
                 </button>
             </div>
 
@@ -547,141 +463,8 @@
         </div>
     </footer>
 
-    <!-- ==================== CALCULATOR JAVASCRIPT ==================== -->
-    <script>
-        // Get elements
-        const amountInput = document.getElementById('amountInput');
-        const amountSlider = document.getElementById('amountSlider');
-        
-        // Update outputs
-        const traditionalFee = document.getElementById('traditionalFee');
-        const traditionalReceive = document.getElementById('traditionalReceive');
-        const dconnectFee = document.getElementById('dconnectFee');
-        const dconnectReceive = document.getElementById('dconnectReceive');
-        const youSave = document.getElementById('youSave');
-        const monthlySave = document.getElementById('monthlySave');
-        const yearlySave = document.getElementById('yearlySave');
-
-        // Sync input and slider
-        amountInput.addEventListener('input', (e) => {
-            amountSlider.value = e.target.value;
-            updateCalculator();
-        });
-
-        amountSlider.addEventListener('input', (e) => {
-            amountInput.value = e.target.value;
-            updateCalculator();
-        });
-
-        // Calculate and display results
-        function updateCalculator() {
-            const amount = parseFloat(amountInput.value) || 0;
-            
-            // Traditional services (10% fee)
-            const tradFee = amount * 0.10;
-            const tradReceive = amount - tradFee;
-            
-            // DiasporaConnect (1% fee)
-            const dcFee = amount * 0.01;
-            const dcReceive = amount - dcFee;
-            
-            // Savings
-            const savings = tradFee - dcFee;
-            const monthlySavings = savings * 4;
-            const yearlySavings = savings * 12;
-            
-            // Update DOM with EUR format
-            traditionalFee.textContent = tradFee.toFixed(2) + ' €';
-            traditionalReceive.textContent = tradReceive.toFixed(2) + ' €';
-            dconnectFee.textContent = dcFee.toFixed(2) + ' €';
-            dconnectReceive.textContent = dcReceive.toFixed(2) + ' €';
-            youSave.textContent = savings.toFixed(2) + ' €';
-            monthlySave.textContent = monthlySavings.toFixed(2) + ' €';
-            yearlySave.textContent = yearlySavings.toFixed(2) + ' €';
-        }
-
-        // Initialize calculator
-        updateCalculator();
-
-        // Smooth scroll for buttons
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', function() {
-                // In a real scenario, this could navigate or show a modal
-                console.log('Action triggered');
-            });
-        });
-
-        // ==================== SCROLL REVEAL ANIMATIONS ====================
-        ScrollReveal().reveal('.fade-in-up', {
-            duration: 800,
-            distance: '50px',
-            easing: 'ease-in-out',
-            origin: 'bottom',
-            interval: 200
-        });
-
-        // Feature cards animation
-        ScrollReveal().reveal('.feature-card', {
-            duration: 600,
-            distance: '30px',
-            easing: 'ease-out',
-            origin: 'bottom',
-            interval: 100
-        });
-
-        // Solution benefit cards
-        ScrollReveal().reveal('.bg-white.bg-opacity-10.backdrop-blur-sm.rounded-xl', {
-            duration: 700,
-            distance: '40px',
-            easing: 'ease-out',
-            origin: 'bottom',
-            interval: 150
-        });
-
-        // Impact stats animation
-        ScrollReveal().reveal('.bg-white.rounded-xl.p-8.text-center', {
-            duration: 600,
-            distance: '30px',
-            easing: 'ease-out',
-            origin: 'bottom',
-            interval: 100
-        });
-
-        // Step circles animation
-        ScrollReveal().reveal('.step-circle', {
-            duration: 600,
-            distance: '40px',
-            easing: 'ease-out',
-            origin: 'bottom',
-            interval: 150,
-            scale: 0.8
-        });
-
-        // Calculator section
-        ScrollReveal().reveal('.savings-highlight', {
-            duration: 800,
-            distance: '50px',
-            easing: 'ease-in-out',
-            origin: 'bottom'
-        });
-
-        // Buttons animation
-        ScrollReveal().reveal('button', {
-            duration: 600,
-            distance: '20px',
-            easing: 'ease-out',
-            origin: 'bottom'
-        });
-
-        // Headings animation
-        ScrollReveal().reveal('h2, h3', {
-            duration: 600,
-            distance: '30px',
-            easing: 'ease-out',
-            origin: 'top',
-            delay: 100
-        });
-    </script>
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="app.js"></script>
 
 </body>
 </html>
