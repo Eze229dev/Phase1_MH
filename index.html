@@ -9,21 +9,21 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
 </head>
-<body class="bg-gray-50">
+<body style="background-color: #F5F7FF;">
     
     <!-- ==================== HEADER/NAVBAR ==================== -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
+    <header class="sticky top-0 z-50 bg-white shadow-md" style="border-bottom: 1px solid #E8EAF6;">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: linear-gradient(135deg, #1A56DB 0%, #10B981 100%);">
                     <i class="fas fa-globe text-white text-lg font-bold"></i>
                 </div>
-                <span class="text-xl font-bold text-gray-900">DiasporaConnect</span>
+                <span class="text-xl font-bold" style="color: #111827; font-family: 'Fraunces', serif;">DiasporaConnect</span>
             </div>
             <nav class="hidden md:flex gap-8">
-                <a href="#calculator-section" class="text-gray-700 hover:text-emerald-600 font-medium transition">Calculatrice</a>
-                <a href="#how-it-works" class="text-gray-700 hover:text-emerald-600 font-medium transition">Comment ça marche</a>
-                <a href="#impact" class="text-gray-700 hover:text-emerald-600 font-medium transition">Impact</a>
+                <a href="#calculator-section" class="font-medium transition" style="color: #6B7280;">Calculatrice</a>
+                <a href="#how-it-works" class="font-medium transition" style="color: #6B7280;">Comment ça marche</a>
+                <a href="#impact" class="font-medium transition" style="color: #6B7280;">Impact</a>
             </nav>
             <button id="mobileMenuBtn" class="md:hidden text-gray-700 hover:text-emerald-600">
                 <i class="fas fa-bars text-2xl"></i>
@@ -31,11 +31,11 @@
         </div>
         
         <!-- Mobile Menu -->
-        <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <nav id="mobileMenu" class="hidden md:hidden bg-white" style="border-top: 1px solid #E8EAF6;">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                <a href="#calculator-section" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium transition">Calculatrice</a>
-                <a href="#how-it-works" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium transition">Comment ça marche</a>
-                <a href="#impact" class="block py-2 text-gray-700 hover:text-emerald-600 font-medium transition">Impact</a>
+                <a href="#calculator-section" class="block py-2 font-medium transition" style="color: #6B7280;">Calculatrice</a>
+                <a href="#how-it-works" class="block py-2 font-medium transition" style="color: #6B7280;">Comment ça marche</a>
+                <a href="#impact" class="block py-2 font-medium transition" style="color: #6B7280;">Impact</a>
             </div>
         </nav>
     </header>
@@ -46,21 +46,21 @@
                 
                 <!-- Left: Copy -->
                 <div class="fade-in-up">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;">
                         Envoyez de l'argent à la maison.
-                        <span class="text-yellow-300">Conservez votre richesse.</span>
+                        <span style="color: #F59E0B;">Conservez votre richesse.</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-emerald-50 mb-8 leading-relaxed">
+                    <p class="text-lg md:text-xl text-emerald-50 mb-8 leading-relaxed" style="color: rgba(255, 255, 255, 0.9); font-family: 'DM Sans', sans-serif; font-weight: 400;">
                         Les transferts d'argent africains perdent <strong>100 millions de dollars chaque année</strong> en frais cachés. DiasporaConnect change cela.
                     </p>
                     
                     <!-- Key Stat Highlight -->
-                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 mb-8 border border-white border-opacity-20">
-                        <p class="text-sm text-emerald-100 mb-2">Économies moyennes par transaction</p>
-                        <p class="text-3xl font-bold">8-15 €</p>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 mb-8 border" style="border-color: rgba(255, 255, 255, 0.2);">
+                        <p class="text-sm text-emerald-100 mb-2" style="color: rgba(255, 255, 255, 0.8);">Économies moyennes par transaction</p>
+                        <p class="text-3xl font-bold" style="color: #F59E0B; font-family: 'Fraunces', serif; font-weight: 900;">8-15 €</p>
                     </div>
                     
-                    <button onclick="document.getElementById('calculator-section').scrollIntoView({ behavior: 'smooth' })" class="btn-primary bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-2xl">
+                    <button onclick="document.getElementById('calculator-section').scrollIntoView({ behavior: 'smooth' })" class="btn-primary bg-white text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-2xl" style="background: white; color: #1A56DB; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-weight: 600;">
                         Calculez vos économies →
                     </button>
                 </div>
@@ -94,54 +94,54 @@
     <section class="py-16 md:py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 fade-in-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Le Problème est Réel</h2>
-                <p class="text-lg text-gray-600">Les frais de transfert sont parmi les coûts financiers les plus élevés en Afrique</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #111827; font-family: 'Fraunces', serif; font-weight: 900;">Le Problème est Réel</h2>
+                <p class="text-lg" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">Les frais de transfert sont parmi les coûts financiers les plus élevés en Afrique</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 
                 <!-- Problem Card 1 -->
-                <div class="feature-card bg-gray-50 rounded-xl p-8 border border-gray-200">
-                    <div class="text-4xl mb-4"><i class="fas fa-money-bill-wave text-red-600"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">L'argent s'écoule</h3>
-                    <p class="text-gray-700">Les services de transfert traditionnels facturent 7-15% par transaction. Un transfert de 200 € perd 14-30 €.</p>
-                    <div class="mt-6 pt-6 border-t border-gray-200">
-                        <p class="text-sm text-gray-600">Pour une famille envoyant 500 €/mois :</p>
-                        <p class="text-2xl font-bold text-red-600 mt-2">840 €/an perdus</p>
+                <div class="feature-card p-8" style="background-color: #FFFFFF; border: 1px solid #E8EAF6; border-radius: 16px; border-left: 4px solid #EF4444;">
+                    <div class="text-4xl mb-4"><i class="fas fa-money-bill-wave" style="color: #EF4444;"></i></div>
+                    <h3 class="text-xl font-bold mb-3" style="color: #111827; font-family: 'Fraunces', serif; font-weight: 900;">L'argent s'écoule</h3>
+                    <p style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">Les services de transfert traditionnels facturent 7-15% par transaction. Un transfert de 200 € perd 14-30 €.</p>
+                    <div class="mt-6 pt-6" style="border-top: 1px solid #E8EAF6;">
+                        <p class="text-sm" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">Pour une famille envoyant 500 €/mois :</p>
+                        <p class="text-2xl font-bold mt-2" style="color: #EF4444; font-family: 'Fraunces', serif; font-weight: 900;">840 €/an perdus</p>
                     </div>
                 </div>
 
                 <!-- Problem Card 2 -->
-                <div class="feature-card bg-gray-50 rounded-xl p-8 border border-gray-200">
-                    <div class="text-4xl mb-4"><i class="fas fa-hourglass-end text-orange-600"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lent et Pénible</h3>
-                    <p class="text-gray-700">L'argent prend 3-7 jours pour arriver. Les familles ont besoin d'aide urgent MAINTENANT, pas la semaine prochaine.</p>
-                    <div class="mt-6 pt-6 border-t border-gray-200">
-                        <p class="text-sm text-gray-600">Factures médicales d'urgence ?</p>
-                        <p class="text-lg font-bold text-orange-600 mt-2">On ne peut pas attendre 5 jours</p>
+                <div class="feature-card p-8" style="background-color: #FFFFFF; border: 1px solid #E8EAF6; border-radius: 16px; border-left: 4px solid #F59E0B;">
+                    <div class="text-4xl mb-4"><i class="fas fa-hourglass-end" style="color: #F59E0B;"></i></div>
+                    <h3 class="text-xl font-bold mb-3" style="color: #111827; font-family: 'Fraunces', serif; font-weight: 900;">Lent et Pénible</h3>
+                    <p style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">L'argent prend 3-7 jours pour arriver. Les familles ont besoin d'aide urgent MAINTENANT, pas la semaine prochaine.</p>
+                    <div class="mt-6 pt-6" style="border-top: 1px solid #E8EAF6;">
+                        <p class="text-sm" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">Factures médicales d'urgence ?</p>
+                        <p class="text-lg font-bold mt-2" style="color: #F59E0B; font-family: 'Fraunces', serif; font-weight: 900;">On ne peut pas attendre 5 jours</p>
                     </div>
                 </div>
 
                 <!-- Problem Card 3 -->
-                <div class="feature-card bg-gray-50 rounded-xl p-8 border border-gray-200">
-                    <div class="text-4xl mb-4"><i class="fas fa-lock text-red-700"></i></div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Risque et Opacité</h3>
-                    <p class="text-gray-700">Pas de transparence. Les intermédiaires prennent des coupes. L'argent peut se perdre dans le système.</p>
-                    <div class="mt-6 pt-6 border-t border-gray-200">
-                        <p class="text-sm text-gray-600">Détails du transfert :</p>
-                        <p class="text-lg font-bold text-red-700 mt-2">Une boîte noire</p>
+                <div class="feature-card p-8" style="background-color: #FFFFFF; border: 1px solid #E8EAF6; border-radius: 16px; border-left: 4px solid #EF4444;">
+                    <div class="text-4xl mb-4"><i class="fas fa-lock" style="color: #EF4444;"></i></div>
+                    <h3 class="text-xl font-bold mb-3" style="color: #111827; font-family: 'Fraunces', serif; font-weight: 900;">Risque et Opacité</h3>
+                    <p style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">Pas de transparence. Les intermédiaires prennent des coupes. L'argent peut se perdre dans le système.</p>
+                    <div class="mt-6 pt-6" style="border-top: 1px solid #E8EAF6;">
+                        <p class="text-sm" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">Détails du transfert :</p>
+                        <p class="text-lg font-bold mt-2" style="color: #EF4444; font-family: 'Fraunces', serif; font-weight: 900;">Une boîte noire</p>
                     </div>
                 </div>
             </div>
 
             <!-- Real Impact -->
-            <div class="mt-16 bg-red-50 border-l-4 border-red-600 rounded-lg p-8">
-                <p class="text-xl text-gray-900 font-semibold mb-3"><i class="fas fa-map-pin text-red-600 mr-2"></i>Impact au Bénin :</p>
-                <p class="text-lg text-gray-700">
+            <div class="mt-16 rounded-lg p-8" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(239, 68, 68, 0.02) 100%); border-left: 4px solid #EF4444;">
+                <p class="text-xl font-semibold mb-3" style="color: #111827; font-family: 'Fraunces', serif; font-weight: 900;"><i class="fas fa-map-pin mr-2" style="color: #EF4444;"></i>Impact au Bénin :</p>
+                <p class="text-lg" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">
                     Le Bénin reçoit environ 350 millions € de transferts annuels. À un taux de frais moyen de 10%, 
-                    <strong class="text-red-700">les familles perdent 35 millions € chaque année</strong> uniquement en frais.
+                    <strong style="color: #EF4444; font-weight: 600;">les familles perdent 35 millions € chaque année</strong> uniquement en frais.
                 </p>
-                <p class="text-gray-600 mt-3 italic">C'est l'école, les soins de santé et la dignité qui s'échappent.</p>
+                <p class="mt-3 italic" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">C'est l'école, les soins de santé et la dignité qui s'échappent.</p>
             </div>
         </div>
     </section>
@@ -150,38 +150,38 @@
     <section class="py-16 md:py-24 gradient-hero text-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 fade-in-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">La Solution : Simplicité Blockchain</h2>
-                <p class="text-lg text-emerald-50">Pas de banques. Pas d'intermédiaires. Pas de complexité.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;">La Solution : Simplicité Blockchain</h2>
+                <p class="text-lg" style="color: rgba(255, 255, 255, 0.9); font-family: 'DM Sans', sans-serif; font-weight: 400;">Pas de banques. Pas d'intermédiaires. Pas de complexité.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 
                 <!-- Solution Benefit 1 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
-                    <div class="text-5xl mb-4"><i class="fas fa-heart text-green-400"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Frais Minimes (1%)</h3>
-                    <p class="text-emerald-50">Envoyer 200 € ? Vous paierez environ 2 €. C'est tout. Pas de frais cachés. Pas de surprises.</p>
+                <div class="rounded-xl p-8 border transition-all" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); border-color: rgba(255, 255, 255, 0.2);">
+                    <div class="text-5xl mb-4"><i class="fas fa-heart" style="color: #10B981;"></i></div>
+                    <h3 class="text-xl font-bold mb-3" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;">Frais Minimes (1%)</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-family: 'DM Sans', sans-serif; font-weight: 400;">Envoyer 200 € ? Vous paierez environ 2 €. C'est tout. Pas de frais cachés. Pas de surprises.</p>
                 </div>
 
                 <!-- Solution Benefit 2 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
-                    <div class="text-5xl mb-4"><i class="fas fa-bolt text-yellow-300"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Livraison Instantanée</h3>
-                    <p class="text-emerald-50">L'argent arrive en minutes, pas en jours. Votre famille l'obtient MAINTENANT quand elle en a besoin.</p>
+                <div class="rounded-xl p-8 border transition-all" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); border-color: rgba(255, 255, 255, 0.2);">
+                    <div class="text-5xl mb-4"><i class="fas fa-bolt" style="color: #F59E0B;"></i></div>
+                    <h3 class="text-xl font-bold mb-3" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;">Livraison Instantanée</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-family: 'DM Sans', sans-serif; font-weight: 400;">L'argent arrive en minutes, pas en jours. Votre famille l'obtient MAINTENANT quand elle en a besoin.</p>
                 </div>
 
                 <!-- Solution Benefit 3 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all">
-                    <div class="text-5xl mb-4"><i class="fas fa-shield-alt text-blue-300"></i></div>
-                    <h3 class="text-xl font-bold mb-3">Entièrement Sécurisé</h3>
-                    <p class="text-emerald-50">Sécurité de niveau bancaire utilisant la blockchain. Votre argent et votre identité sont protégés.</p>
+                <div class="rounded-xl p-8 border transition-all" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); border-color: rgba(255, 255, 255, 0.2);">
+                    <div class="text-5xl mb-4"><i class="fas fa-shield-alt" style="color: #1A56DB;"></i></div>
+                    <h3 class="text-xl font-bold mb-3" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;">Entièrement Sécurisé</h3>
+                    <p style="color: rgba(255, 255, 255, 0.9); font-family: 'DM Sans', sans-serif; font-weight: 400;">Sécurité de niveau bancaire utilisant la blockchain. Votre argent et votre identité sont protégés.</p>
                 </div>
             </div>
 
             <!-- How It Works Briefly -->
-            <div class="mt-12 bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border border-white border-opacity-20">
-                <h3 class="text-xl font-bold mb-4">Comment ça marche (Langage simple)</h3>
-                <p class="text-emerald-50 text-lg leading-relaxed">
+            <div class="mt-12 rounded-lg p-8 border" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(4px); border-color: rgba(255, 255, 255, 0.2);">
+                <h3 class="text-xl font-bold mb-4" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;">Comment ça marche (Langage simple)</h3>
+                <p class="text-lg leading-relaxed" style="color: rgba(255, 255, 255, 0.9); font-family: 'DM Sans', sans-serif; font-weight: 400;">
                     Vous entrez le montant et le numéro de téléphone du destinataire. Notre système utilise la technologie blockchain pour 
                     <strong>contourner complètement les intermédiaires et les banques</strong>. L'argent se transfère directement et de manière sécurisée. 
                     Votre destinataire l'obtient sur son numéro de téléphone instantanément — sans configuration de compte requise.
@@ -191,27 +191,27 @@
     </section>
 
     <!-- ==================== CALCULATOR SECTION (KEY DIFFERENTIATOR) ==================== -->
-    <section id="calculator-section" class="py-16 md:py-24 bg-white">
+    <section id="calculator-section" class="py-16 md:py-24" style="background-color: #F5F7FF;">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 fade-in-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Voyez Vos Économies</h2>
-                <p class="text-lg text-gray-600">Découvrez exactement combien vous économiserez</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #111827; font-family: 'Fraunces', serif; font-weight: 900;">Voyez Vos Économies</h2>
+                <p class="text-lg" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">Découvrez exactement combien vous économiserez</p>
             </div>
 
-            <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 md:p-12 border border-emerald-200">
+            <div class="rounded-2xl p-8 md:p-12 border" style="background-color: #FFFFFF; border-color: #E8EAF6; border-radius: 16px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);">
                 
                 <!-- Input Section -->
                 <div class="mb-8">
-                    <label class="block text-sm font-semibold text-gray-700 mb-3">Montant à envoyer (EUR)</label>
+                    <label class="block text-sm font-semibold mb-3" style="color: #111827; font-family: 'DM Sans', sans-serif; font-weight: 600;">Montant à envoyer (EUR)</label>
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl font-bold text-gray-900">€</span>
+                        <span class="text-2xl font-bold" style="color: #111827; font-family: 'Fraunces', serif; font-weight: 900;">€</span>
                         <input 
                             type="number" 
                             id="amountInput" 
                             value="200" 
                             min="1" 
                             max="10000"
-                            class="flex-1 py-4 px-6 text-2xl font-bold border-2 border-emerald-300 rounded-lg focus:outline-none focus:border-emerald-600"
+                            class="flex-1 py-4 px-6 text-2xl font-bold rounded-lg focus:outline-none" style="border: 2px solid #1A56DB; color: #111827; font-family: 'Fraunces', serif; font-weight: 900;"
                         >
                     </div>
                     <input 
@@ -221,6 +221,7 @@
                         min="1" 
                         max="2000"
                         class="w-full mt-4 cursor-pointer"
+                        style="accent-color: #1A56DB;"
                     >
                 </div>
 
@@ -228,65 +229,65 @@
                 <div class="grid md:grid-cols-3 gap-6 mt-12">
                     
                     <!-- Traditional Services -->
-                    <div class="bg-white rounded-lg p-6 border border-gray-300">
-                        <p class="text-sm font-semibold text-gray-600 mb-3">Services Traditionnelles (10% moy)</p>
+                    <div class="rounded-lg p-6" style="background-color: #FFFFFF; border: 1px solid #E8EAF6; border-radius: 16px;">
+                        <p class="text-sm font-semibold mb-3" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 600;">Services Traditionnelles (10% moy)</p>
                         <div class="mb-4">
-                            <p class="text-gray-700 text-sm mb-1">Frais</p>
-                            <p class="text-3xl font-bold text-red-600" id="traditionalFee">20 €</p>
+                            <p class="text-sm" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400; margin-bottom: 0.25rem;">Frais</p>
+                            <p class="text-3xl font-bold" id="traditionalFee" style="color: #EF4444; font-family: 'Fraunces', serif; font-weight: 900;">20 €</p>
                         </div>
-                        <div class="border-t border-gray-200 pt-4">
-                            <p class="text-gray-700 text-sm mb-1">Destinataire reçoit</p>
-                            <p class="text-2xl font-bold text-gray-900" id="traditionalReceive">180 €</p>
+                        <div class="pt-4" style="border-top: 1px solid #E8EAF6;">
+                            <p class="text-sm" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400; margin-bottom: 0.25rem;">Destinataire reçoit</p>
+                            <p class="text-2xl font-bold" id="traditionalReceive" style="color: #111827; font-family: 'Fraunces', serif; font-weight: 900;">180 €</p>
                         </div>
                     </div>
 
                     <!-- DiasporaConnect -->
-                    <div class="bg-gradient-accent rounded-lg p-6 relative overflow-hidden border-2 border-yellow-300 shadow-xl">
-                        <div class="absolute top-3 right-3 bg-yellow-300 text-emerald-900 px-3 py-1 rounded-full text-xs font-bold tracking-wide">★ RECOMMANDÉ</div>
-                        <p class="text-sm font-semibold text-black mb-3 mt-6">DiasporaConnect (Frais 1%)</p>
+                    <div class="gradient-accent rounded-lg p-6 relative overflow-hidden border-2" style="border-color: #F59E0B; box-shadow: 0 10px 30px rgba(26, 86, 219, 0.2);">
+                        <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold tracking-wide" style="background-color: #F59E0B; color: white;">★ RECOMMANDÉ</div>
+                        <p class="text-sm font-semibold mb-3 mt-6" style="color: white; font-family: 'DM Sans', sans-serif; font-weight: 600;">DiasporaConnect (Frais 1%)</p>
                         <div class="mb-4">
-                            <p class="text-black text-sm mb-1 font-medium">Frais</p>
-                            <p class="text-3xl font-bold text-yellow-300" id="dconnectFee">2 €</p>
+                            <p class="text-sm mb-1 font-medium" style="color: rgba(255, 255, 255, 0.8); font-family: 'DM Sans', sans-serif; font-weight: 500;">Frais</p>
+                            <p class="text-3xl font-bold" id="dconnectFee" style="color: #F59E0B; font-family: 'Fraunces', serif; font-weight: 900;">2 €</p>
                         </div>
-                        <div class="border-t border-yellow-300 border-opacity-70 pt-4">
-                            <p class="text-black text-sm mb-1 font-medium">Destinataire reçoit</p>
-                            <p class="text-2xl font-bold text-yellow-300" id="dconnectReceive">198 €</p>
+                        <div class="pt-4" style="border-top: 1px solid rgba(255, 255, 255, 0.3);">
+                            <p class="text-sm mb-1 font-medium" style="color: rgba(255, 255, 255, 0.8); font-family: 'DM Sans', sans-serif; font-weight: 500;">Destinataire reçoit</p>
+                            <p class="text-2xl font-bold" id="dconnectReceive" style="color: #F59E0B; font-family: 'Fraunces', serif; font-weight: 900;">198 €</p>
                         </div>
                     </div>
 
                     <!-- You Save -->
-                    <div class="savings-highlight p-6 flex flex-col justify-center">
-                        <p class="text-sm font-semibold text-emerald-900 mb-3"><i class="fas fa-piggy-bank text-emerald-600 mr-2"></i>VOUS ÉCONOMISEZ</p>
-                        <p class="text-4xl font-bold text-emerald-600" id="youSave">18 €</p>
-                        <p class="text-sm text-emerald-700 mt-2">par transaction</p>
+                    <div class="p-6 flex flex-col justify-center rounded-lg" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(26, 86, 219, 0.1) 100%); border: 2px solid #10B981; border-radius: 16px;">
+                        <p class="text-sm font-semibold mb-3" style="color: #10B981; font-family: 'DM Sans', sans-serif; font-weight: 600;\"><i class="fas fa-piggy-bank mr-2"></i>VOUS ÉCONOMISEZ</p>
+                        <p class="text-4xl font-bold" id="youSave" style="color: #10B981; font-family: 'Fraunces', serif; font-weight: 900;">18 €</p>
+                        <p class="text-sm mt-2" style="color: #10B981; font-family: 'DM Sans', sans-serif; font-weight: 400;\">par transaction</p>
                     </div>
                 </div>
 
                 <!-- Extended Savings -->
-                <div class="mt-8 grid md:grid-cols-2 gap-6 border-t-2 border-emerald-200 pt-8">
+                <div class="mt-8 grid md:grid-cols-2 gap-6 pt-8" style="border-top: 2px solid #E8EAF6;">
                     <div>
-                        <p class="text-sm text-gray-600 font-semibold mb-2">Économies Mensuelles (4 transferts)</p>
-                        <p class="text-3xl font-bold text-emerald-600" id="monthlySave">72 €</p>
+                        <p class="text-sm mb-2 font-semibold" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 600;">Économies Mensuelles (4 transferts)</p>
+                        <p class="text-3xl font-bold" id="monthlySave" style="color: #10B981; font-family: 'Fraunces', serif; font-weight: 900;">72 €</p>
                     </div>
                     <div>
-                        <p class="text-sm text-gray-600 font-semibold mb-2">Économies Annuelles</p>
-                        <p class="text-3xl font-bold text-emerald-600" id="yearlySave">864 €</p>
+                        <p class="text-sm mb-2 font-semibold" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 600;">Économies Annuelles</p>
+                        <p class="text-3xl font-bold" id="yearlySave" style="color: #10B981; font-family: 'Fraunces', serif; font-weight: 900;">864 €</p>
                     </div>
                 </div>
 
-                <p class="text-center text-gray-600 text-sm mt-8">
-                    <i class="fas fa-lightbulb text-yellow-500 mr-1"></i>Imaginez si chaque famille du Bénin utilisait DiasporaConnect. C'est <strong>315 millions € économisés annuellement</strong>.
+                <p class="text-center mt-8 text-sm" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;\">
+                    <i class="fas fa-lightbulb mr-1" style="color: #F59E0B;\"></i>Imaginez si chaque famille du Bénin utilisait DiasporaConnect. C'est <strong style="font-weight: 600;">315 millions € économisés annuellement</strong>.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- ==================== HOW IT WORKS SECTION ==================== -->
-    <section id="how-it-works" class="py-16 md:py-24 bg-gray-900 text-white">
+    <section id="how-it-works" class="py-16 md:py-24" style="background-color: #111827;">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Trois Étapes Simples</h2>
-                <p class="text-lg text-gray-400">Cela prend moins d'1 minute</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;\">Trois Étapes Simples</h2>
+                <p class="text-lg" style="color: #9CA3AF; font-family: 'DM Sans', sans-serif; font-weight: 400;\">Cela prend moins d'1 minute</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-12">
@@ -296,16 +297,16 @@
                     <div class="flex justify-center mb-6">
                         <div class="step-circle">1</div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Montant à envoyer</h3>
-                    <p class="text-gray-300 text-lg">
+                    <h3 class="text-2xl font-bold mb-4" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;\">Montant à envoyer</h3>
+                    <p class="text-lg" style="color: #D1D5DB; font-family: 'DM Sans', sans-serif; font-weight: 400;\">
                         Dites-nous combien vous voulez envoyer. Choisissez EUR, USD ou XOF.
                     </p>
-                    <div class="mt-8 text-4xl"><i class="fas fa-smartphone text-emerald-400"></i></div>
+                    <div class="mt-8 text-4xl"><i class="fas fa-smartphone" style="color: #10B981;\"></i></div>
                 </div>
 
                 <!-- Arrow -->
                 <div class="hidden md:flex items-center justify-center">
-                    <div class="text-gray-600 text-4xl">→</div>
+                    <div style="color: #4B5563; font-size: 2.25rem;\">→</div>
                 </div>
 
                 <!-- Step 2 -->
@@ -313,16 +314,16 @@
                     <div class="flex justify-center mb-6">
                         <div class="step-circle">2</div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Ajouter Destinataire</h3>
-                    <p class="text-gray-300 text-lg">
+                    <h3 class="text-2xl font-bold mb-4" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;\">Ajouter Destinataire</h3>
+                    <p class="text-lg" style="color: #D1D5DB; font-family: 'DM Sans', sans-serif; font-weight: 400;\">
                         Entrez le numéro de téléphone de votre membre de la famille. Nous gérons le reste.
                     </p>
-                    <div class="mt-8 text-4xl"><i class="fas fa-phone text-emerald-400"></i></div>
+                    <div class="mt-8 text-4xl"><i class="fas fa-phone" style="color: #10B981;\"></i></div>
                 </div>
 
                 <!-- Arrow -->
                 <div class="hidden md:flex items-center justify-center">
-                    <div class="text-gray-600 text-4xl">→</div>
+                    <div style="color: #4B5563; font-size: 2.25rem;\">→</div>
                 </div>
 
                 <!-- Step 3 -->
@@ -330,61 +331,61 @@
                     <div class="flex justify-center mb-6">
                         <div class="step-circle">3</div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">L'argent arrive</h3>
-                    <p class="text-gray-300 text-lg">
+                    <h3 class="text-2xl font-bold mb-4" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;\">L'argent arrive</h3>
+                    <p class="text-lg" style="color: #D1D5DB; font-family: 'DM Sans', sans-serif; font-weight: 400;\">
                         Instantané. Sécurisé. Ils reçoivent l'argent directement sur leur numéro.
                     </p>
-                    <div class="mt-8 text-4xl"><i class="fas fa-check-circle text-green-400"></i></div>
+                    <div class="mt-8 text-4xl"><i class="fas fa-check-circle" style="color: #10B981;\"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==================== SOCIAL IMPACT SECTION ==================== -->
-    <section id="impact" class="py-16 md:py-24 bg-gradient-to-r from-emerald-50 to-cyan-50">
+    <section id="impact" class="py-16 md:py-24" style="background: linear-gradient(to right, rgba(245, 247, 255, 0.5), rgba(245, 247, 255, 0.5)), linear-gradient(135deg, #F5F7FF 0%, #F5F7FF 100%);">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 fade-in-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Impact Réel. Changement Réel.</h2>
-                <p class="text-lg text-gray-600">Ce n'est pas juste une question de transfert d'argent. C'est une question de dignité, d'opportunité et d'espoir.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #111827; font-family: 'Fraunces', serif; font-weight: 900;\">Impact Réel. Changement Réel.</h2>
+                <p class="text-lg" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;\">Ce n'est pas juste une question de transfert d'argent. C'est une question de dignité, d'opportunité et d'espoir.</p>
             </div>
 
             <div class="grid md:grid-cols-4 gap-6 mb-12">
                 
                 <!-- Impact Stat 1 -->
-                <div class="bg-white rounded-xl p-8 text-center border border-emerald-200 shadow-sm">
+                <div class="rounded-xl p-8 text-center border" style="background-color: #FFFFFF; border-color: #E8EAF6; border-radius: 16px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
                     <p class="stat-number">35M €</p>
-                    <p class="text-gray-600 font-semibold mt-2">Économisé au Bénin par an</p>
-                    <p class="text-sm text-gray-500 mt-2">Si toute la diaspora nous utilisait</p>
+                    <p class="font-semibold mt-2" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 600;\">Économisé au Bénin par an</p>
+                    <p class="text-sm mt-2" style="color: #9CA3AF; font-family: 'DM Sans', sans-serif; font-weight: 400;\">Si toute la diaspora nous utilisait</p>
                 </div>
 
                 <!-- Impact Stat 2 -->
-                <div class="bg-white rounded-xl p-8 text-center border border-emerald-200 shadow-sm">
+                <div class="rounded-xl p-8 text-center border" style="background-color: #FFFFFF; border-color: #E8EAF6; border-radius: 16px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
                     <p class="stat-number">14x</p>
-                    <p class="text-gray-600 font-semibold mt-2">Frais plus bas</p>
-                    <p class="text-sm text-gray-500 mt-2">vs. services traditionnels</p>
+                    <p class="font-semibold mt-2" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 600;\">Frais plus bas</p>
+                    <p class="text-sm mt-2" style="color: #9CA3AF; font-family: 'DM Sans', sans-serif; font-weight: 400;\">vs. services traditionnels</p>
                 </div>
 
                 <!-- Impact Stat 3 -->
-                <div class="bg-white rounded-xl p-8 text-center border border-emerald-200 shadow-sm">
+                <div class="rounded-xl p-8 text-center border" style="background-color: #FFFFFF; border-color: #E8EAF6; border-radius: 16px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
                     <p class="stat-number">100%</p>
-                    <p class="text-gray-600 font-semibold mt-2">Transparent</p>
-                    <p class="text-sm text-gray-500 mt-2">Pas de frais cachés, jamais</p>
+                    <p class="font-semibold mt-2" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 600;\">Transparent</p>
+                    <p class="text-sm mt-2" style="color: #9CA3AF; font-family: 'DM Sans', sans-serif; font-weight: 400;\">Pas de frais cachés, jamais</p>
                 </div>
 
                 <!-- Impact Stat 4 -->
-                <div class="bg-white rounded-xl p-8 text-center border border-emerald-200 shadow-sm">
+                <div class="rounded-xl p-8 text-center border" style="background-color: #FFFFFF; border-color: #E8EAF6; border-radius: 16px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
                     <p class="stat-number">&lt;1 min</p>
-                    <p class="text-gray-600 font-semibold mt-2">Temps de Transaction</p>
-                    <p class="text-sm text-gray-500 mt-2">Du début à la fin</p>
+                    <p class="font-semibold mt-2" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 600;\">Temps de Transaction</p>
+                    <p class="text-sm mt-2" style="color: #9CA3AF; font-family: 'DM Sans', sans-serif; font-weight: 400;\">Du début à la fin</p>
                 </div>
             </div>
 
             <!-- Emotional Impact Statement -->
-            <div class="bg-white rounded-2xl p-8 md:p-12 border-l-4 border-emerald-600 shadow-lg">
-                <p class="text-2xl md:text-3xl font-bold text-gray-900 leading-relaxed">
+            <div class="rounded-2xl p-8 md:p-12 border-l-4" style="background-color: #FFFFFF; border-left-color: #1A56DB; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);">
+                <p class="text-2xl md:text-3xl font-bold leading-relaxed" style="color: #111827; font-family: 'Fraunces', serif; font-weight: 900;">
                     « Quand les familles de la diaspora envoient de l'argent à la maison, elles ne déplacent pas juste des chiffres. Elles paient les uniformes scolaires, 
                     les médicaments, la nourriture sur la table et les rêves de demain. 
-                    <span class="text-emerald-600">DiasporaConnect s'assure que plus de cet amour atteint sa destination.</span> »
+                    <span style="color: #1A56DB;\">DiasporaConnect s'assure que plus de cet amour atteint sa destination.</span> »
                 </p>
             </div>
         </div>
@@ -393,54 +394,54 @@
     <!-- ==================== CALL TO ACTION SECTION ==================== -->
     <section class="py-16 md:py-24 gradient-hero text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Prêt à envoyer plus intelligemment ?</h2>
-            <p class="text-lg md:text-xl text-emerald-50 mb-12">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;\">Prêt à envoyer plus intelligemment ?</h2>
+            <p class="text-lg md:text-xl mb-12" style="color: rgba(255, 255, 255, 0.9); font-family: 'DM Sans', sans-serif; font-weight: 400;\">
                 Rejoignez les familles à travers l'Afrique de l'Ouest qui économisent déjà des milliers.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <button class="btn-primary bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg">
-                  <a href="#calculator-section">Commencer maintenant <i class="fas fa-arrow-right ml-2"></i></a>
+                <button class="btn-primary bg-white text-white px-8 py-4 font-bold text-lg" style="background: white; color: #1A56DB; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-weight: 600;">
+                  <a href="#calculator-section" style="color: #1A56DB; text-decoration: none;\">Commencer maintenant <i class="fas fa-arrow-right ml-2"></i></a>
                 </button>
-                <button class="btn-primary border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-emerald-600 transition-all">
-                    <a href="#how-it-works">En savoir plus <i class="fas fa-info-circle ml-2"></i></a> 
+                <button class="btn-primary border-2 text-white px-8 py-4 font-bold text-lg transition-all" style="border-color: white; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-weight: 600; background: transparent; color: white;\">
+                    <a href="#how-it-works" style="color: white; text-decoration: none;\">En savoir plus <i class="fas fa-info-circle ml-2"></i></a> 
                 </button>
             </div>
 
-            <p class="text-sm text-emerald-100"><i class="fas fa-lock mr-2"></i>Sécurisé. Instantané. Équitable.</p>
+            <p class="text-sm" style="color: rgba(255, 255, 255, 0.8); font-family: 'DM Sans', sans-serif; font-weight: 400;\"><i class="fas fa-lock mr-2"></i>Sécurisé. Instantané. Équitable.</p>
         </div>
     </section>
 
     <!-- ==================== FOOTER ==================== -->
-    <footer class="bg-gray-900 text-gray-300 py-12 md:py-8">
+    <footer class="py-12 md:py-8" style="background-color: #111827;">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8 md:gap-0 mb-8 md:mb-0 md:flex md:justify-between md:items-center pb-8 md:pb-0 border-b md:border-b-0 border-gray-700">
+            <div class="grid md:grid-cols-3 gap-8 md:gap-0 mb-8 md:mb-0 md:flex md:justify-between md:items-center pb-8 md:pb-0 md:border-b-0 border-gray-700" style="border-bottom: 1px solid #374151;">
                 <div class="text-center md:text-left">
                     <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
-                        <div class="w-8 h-8 bg-emerald-600 rounded flex items-center justify-center">
+                        <div class="w-8 h-8 rounded flex items-center justify-center" style="background: linear-gradient(135deg, #1A56DB 0%, #10B981 100%);">
                             <i class="fas fa-globe text-white text-sm"></i>
                         </div>
-                        <p class="font-bold text-white text-lg">DiasporaConnect</p>
+                        <p class="font-bold text-lg" style="color: white; font-family: 'Fraunces', serif; font-weight: 900;\">DiasporaConnect</p>
                     </div>
-                    <p class="text-sm text-gray-400">Rendre les transferts équitables</p>
+                    <p class="text-sm" style="color: #9CA3AF; font-family: 'DM Sans', sans-serif; font-weight: 400;\">Rendre les transferts équitables</p>
                 </div>
                 <div class="hidden md:block text-center">
-                    <p class="text-sm">&copy; 2026 DiasporaConnect. Tous droits réservés.</p>
+                    <p class="text-sm" style="color: #6B7280; font-family: 'DM Sans', sans-serif; font-weight: 400;">&copy; 2026 DiasporaConnect. Tous droits réservés.</p>
                 </div>
                 <div class="flex justify-center md:justify-end gap-4">
-                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">
+                    <a href="#" class="transition" style="color: #6B7280; text-decoration: none;\">
                         <i class="fab fa-facebook text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">
+                    <a href="#" class="transition" style="color: #6B7280; text-decoration: none;\">
                         <i class="fab fa-twitter text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-emerald-400 transition">
+                    <a href="#" class="transition" style="color: #6B7280; text-decoration: none;\">
                         <i class="fab fa-linkedin text-xl"></i>
                     </a>
                 </div>
             </div>
-            <div class="md:hidden text-center pt-4 text-xs text-gray-500">
-                <p>&copy; 2026 DiasporaConnect. Tous droits réservés.</p>
+            <div class="md:hidden text-center pt-4" style="border-top: 1px solid #374151;\">
+                <p class="text-xs" style="color: #4B5563; font-family: 'DM Sans', sans-serif; font-weight: 400;">&copy; 2026 DiasporaConnect. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
